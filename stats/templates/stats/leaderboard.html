@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Leaderboard</h2>
+<ol>
+  {% for reward in rewards %}
+    <li>{{ reward.user.username }} - {{ reward.points }} pts ({{ reward.badge }})</li>
+  {% endfor %}
+</ol>
+{% endblock %}
