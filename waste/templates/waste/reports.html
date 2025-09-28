@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>All Waste Reports</h2>
+<ul>
+  {% for report in reports %}
+    <li>
+      <img src="{{ report.image.url }}" width="200" />
+      <p>{{ report.description }}</p>
+      <small>{{ report.date_reported }}</small>
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}
