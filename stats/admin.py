@@ -1,3 +1,6 @@
-from django.contrib import admin
+from django.contrib import admin # type: ignore
+from .models import Reward
 
-# Register your models here.
+@admin.register(Reward)
+class RewardAdmin(admin.ModelAdmin):
+    list_display = ('participant_name', 'points', 'badge')

@@ -1,16 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>GreenCampus</title>
+    <meta charset="UTF-8">
+    <title>GreenCampus</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-  <nav>
-    <a href="/waste/reports/">Waste Reports</a> |
-    <a href="/events/">Events</a> |
-    <a href="/stats/leaderboard/">Leaderboard</a>
-  </nav>
-  <hr>
-  {% block content %}{% endblock %}
+    <header>
+        <nav>
+            <a href="/waste/reports/">Waste Reports</a> |
+            <a href="/events/">Events</a> |
+            <a href="/stats/leaderboard/">Leaderboard</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
 </body>
 </html>
